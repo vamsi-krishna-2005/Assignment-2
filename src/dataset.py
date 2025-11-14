@@ -73,3 +73,12 @@ class TextDataset(Dataset):
     def __getitem__(self, idx):
         input_seq, target_word = self.sequences[idx]
         return torch.tensor(input_seq).long(), torch.tensor(target_word).long()
+    
+
+# Example usage:
+filepath = '../dataset/Pride_and_Prejudice-Jane_Austen.txt'
+raw_text = load_data(filepath)
+print(raw_text[:500])
+
+all_tokens = preprocess_text(raw_text, "CHAPTER I.", "***END OF THE PROJECT GUTENBERG EBOOK PRIDE AND PREJUDICE***")
+print(all_tokens[:50])
