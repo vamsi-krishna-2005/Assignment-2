@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 
 class LSTMModel(nn.Module):
-    """Our from-scratch LSTM Language Model."""
     def __init__(self, vocab_size, embedding_dim, hidden_dim, num_layers, dropout_prob=0.3):
         super(LSTMModel, self).__init__()
         self.num_layers = num_layers
@@ -35,7 +34,6 @@ class LSTMModel(nn.Module):
                 torch.zeros(self.num_layers, batch_size, self.hidden_dim).to(device))
 
 class GRUModel(nn.Module):
-    """Our from-scratch GRU Language Model (for extra credit)."""
     def __init__(self, vocab_size, embedding_dim, hidden_dim, num_layers, dropout_prob=0.3):
         super(GRUModel, self).__init__()
         self.num_layers = num_layers
