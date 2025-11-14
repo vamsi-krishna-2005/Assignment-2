@@ -175,7 +175,7 @@ if __name__ == "__main__":
     
     # --- General ---
     parser.add_argument('--run_name', type=str, default='run_default', help='Name for this training run (creates a folder)')
-    parser.add_argument('--data_file', type=str, default='data/Pride_and_Prejudice-Jane_Austen.txt')
+    parser.add_argument('--data_file', type=str, default='dataset/Pride_and_Prejudice-Jane_Austen.txt')
     
     # --- Model Hyperparameters ---
     parser.add_argument('--model_type', type=str, default='lstm', help='Model architecture (lstm or gru)')
